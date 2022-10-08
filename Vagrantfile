@@ -37,6 +37,7 @@ SUPPORTED_OS = {
   "oraclelinux8"        => {box: "generic/oracle8",            user: "vagrant"},
   "rhel7"               => {box: "generic/rhel7",              user: "vagrant"},
   "rhel8"               => {box: "generic/rhel8",              user: "vagrant"},
+  "ubuntu2004arm"          => {box: "luminositylabsllc/bento-ubuntu-20.04-arm64",         user: "vagrant"},
 }
 
 if File.exist?(CONFIG)
@@ -144,7 +145,11 @@ Vagrant.configure("2") do |config|
           v.vmx['numvcpus'] = $vm_cpus
         end
       end
-
+      node.vm.provider :parallels do |prl|
+        prl.memory = $vm_memory
+        prl.cpus = $vm_cpus
+        prl.update_guest_tools = true
+      end
       node.vm.provider :virtualbox do |vb|
         vb.memory = $vm_memory
         vb.cpus = $vm_cpus
