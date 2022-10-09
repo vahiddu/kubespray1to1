@@ -244,7 +244,7 @@ Vagrant.configure("2") do |config|
         "docker_rpm_keepcache": "1",
         # These two settings will put kubectl and admin.config in $inventory/artifacts
         "kubeconfig_localhost": "True",
-        "kubectl_localhost": "True",
+        "kubectl_localhost": "False",
         "local_path_provisioner_enabled": "#{$local_path_provisioner_enabled}",
         "local_path_provisioner_claim_root": "#{$local_path_provisioner_claim_root}",
         "ansible_ssh_user": SUPPORTED_OS[$os][:user]

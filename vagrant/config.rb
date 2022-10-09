@@ -8,6 +8,5 @@ $subnet = "172.18.8"
 $etcd_instances = 1
 $kube_master_instances = 1
 $kube_node_instances = 1
-#$ansible_tags = ["etchosts", "dashboard", "metrics_server", "ingress-controller", "facts", "cert-manager", "helm"]
-$ansible_tags = ["apps", "ingress-controller"]
+#$ansible_tags = ["apps", "ingress-controller"]
 $inventory = "inventory/mycluster"
