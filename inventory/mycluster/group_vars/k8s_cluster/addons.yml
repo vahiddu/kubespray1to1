@@ -160,10 +160,10 @@ cert_manager_enabled: false
 # cert_manager_leader_election_namespace: kube-system
 
 # MetalLB deployment
-metallb_enabled: false
+metallb_enabled: true
 metallb_speaker_enabled: true
-# metallb_ip_range:
-#   - "10.5.0.50-10.5.0.99"
+metallb_ip_range:
+  - "172.18.8.150-172.18.8.250"
 # metallb_pool_name: "loadbalanced"
 # metallb_auto_assign: true
 # metallb_avoid_buggy_ips: false
