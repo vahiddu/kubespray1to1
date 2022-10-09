@@ -170,6 +170,7 @@ Vagrant.configure("2") do |config|
           lv.cpu_mode = "host-passthrough"
         end
       end
+      
 
       if $kube_node_instances_with_disks
         # Libvirt
@@ -212,6 +213,7 @@ Vagrant.configure("2") do |config|
         :libvirt__ipv6_prefix => "64",
         :libvirt__forward_mode => "none",
         :libvirt__dhcp_enabled => false
+
 
       # Disable swap for each vm
       node.vm.provision "shell", inline: "swapoff -a"
