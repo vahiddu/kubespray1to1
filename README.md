@@ -47,4 +47,8 @@ declare -a IPS=(172.18.8.101 172.18.8.102)
 KUBE_CONTROL_HOSTS=1 CONFIG_FILE=inventory/mycluster/hosts.ini python3 contrib/inventory_builder/inventory.py ${IPS[@]}
 ```
 
+ArogCD: https://172.18.8.150:8080/ user:admin pass:password
+Grafana: http://172.18.8.151:3000 user:admin pass:prom-operator
+
+
 
