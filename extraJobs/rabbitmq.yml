@@ -1,0 +1,8 @@
+- name: RabbitMQ fsFileMax to 500000
+  hosts: all
+  gather_facts: True
+  become: True
+  tasks:
+    - name: Populate service facts and change fsFileMax
+      command: sysctl -w fs.file-max=500000
+      when: "services is search('rabbitmq-server')"
