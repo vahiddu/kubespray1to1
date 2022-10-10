@@ -4,7 +4,7 @@ Kubespray ile 1 master 1 worker cluster üzerinde metallb,argocd,prometheus-stac
 İlk önce aşağıdaki komutlar ile kubespray kurulumunun yönetileceği macos ortamı hazırlanır.
 
 ```ShellSession
-brew install python && alias python=python3 && python -m pip install --upgrade pip && alias pip=pip3 && brew install vagrant && brew install kubectl && brew install helm &&brew install git && cd ~/ && git clone https://github.com/kubernetes-sigs/kubespray.git && cd kubespray && pip3 install -r requirements.txt && cd contrib/inventory_builder && pip3 install -r requirements.txt
+brew install python && alias python=python3 && python -m pip install --upgrade pip && alias pip=pip3 && brew install vagrant && brew install kubectl && brew install helm &&brew install git && cd ~/ && git clone https://github.com/vahiddu/kubespray1to1.git && cd kubespray && pip3 install -r requirements.txt && cd contrib/inventory_builder && pip3 install -r requirements.txt && cd ../../
 ```
 Parallels yüklemek için 
 `brew install --cask parallels`
@@ -12,7 +12,7 @@ Virtualbox yüklemek için
 `brew install --cask virtualbox && brew install --cask virtualbox-extension-pack`
 
 
-Ardından vagrant up komutu ile çalıştırıyoruz. 
+Ardından `vagrant up` komutu ile çalıştırıyoruz. 
 
 ssh fatal error durumunda aşağıdakiler yapılabilir 
 - ansible_host ipleri makine içinden bakılarak inventory/mycluster/hosts.ini ansible_host değiştirilmeli
