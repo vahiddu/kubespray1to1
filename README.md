@@ -50,5 +50,6 @@ KUBE_CONTROL_HOSTS=1 CONFIG_FILE=inventory/mycluster/hosts.ini python3 contrib/i
 ArogCD: https://172.18.8.150:8080/ user:admin pass:password
 Grafana: http://172.18.8.151:3000 user:admin pass:prom-operator
 
+Önemli NOT: IP çakışması halinde `vagrant destroy -f` komutu ardından VS Code ile proje açılarak 172.18.8 find and replace ile istenilen IP bloğuna tüm proje üzerinde çevirilip tekrar `Vagrant up` ile ayağa kaldırılabilir.
 
 
