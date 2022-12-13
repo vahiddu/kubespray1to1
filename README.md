@@ -10,6 +10,7 @@ Parallels yüklemek için
 `brew install --cask parallels`
 Virtualbox yüklemek için 
 `brew install --cask virtualbox && brew install --cask virtualbox-extension-pack`
+`vagrant plugin install vagrant-vboxmanage; vagrant plugin install vagrant-vbguest`
 
 
 Ardından `vagrant up` komutu ile çalıştırıyoruz. 
