@@ -139,4 +139,4 @@
   become: true
   tasks:
     - name: Install apps
-      import_playbook:: apps.yml
+      import_playbook: apps.yml
