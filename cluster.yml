@@ -134,9 +134,9 @@
 
 
 # Install Apps
-- hosts: kube_control_plane
-  gather_facts: false
-  become: true
-  tasks:
-    - name: Install apps
-      import_playbook: apps.yml
+# - hosts: kube_control_plane
+#   gather_facts: false
+#   become: true
+#   tasks:
+#     - name: Install apps
+#       import_playbook:: apps.yml
