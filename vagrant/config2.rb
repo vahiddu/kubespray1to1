@@ -1,7 +1,7 @@
 $os = "ubuntu2004"
 $num_instances = 2
 $instance_name_prefix = "k8s"
-$vm_memory = 2048
+$vm_memory = 3000
 $vm_cpus = 2
 $subnet = "192.168.57"
 #$subnetHost = "172.16.100"

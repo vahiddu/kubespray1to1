@@ -93,12 +93,32 @@
         release_state: present
 
 
-# - hosts: kube_control_plane
-#   gather_facts: false
-#   tasks:
+- hosts: kube_control_plane
+  gather_facts: false
+  tasks:
+    - name: Create a Service object from an inline definition
+      kubernetes.core.k8s:
+        state: present
+        definition:
+            apiVersion: v1
+            kind: PersistentVolume
+            metadata:
+              name: registry-pv
+              labels:
+                type: local
+            spec:
+              storageClassName: local-storage
+              capacity:
+                storage: 10Gi
+              accessModes:
+                - ReadWriteOnce
+              hostPath:
+                path: "/mnt/disks/registry"
+    - command: kubectl patch storageclass local-storage -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 #     - command: kubectl expose deployment argocd-server --type=LoadBalancer --name=argocd-server-ext -n argocd
 #     - command: kubectl expose deployment kube-prometheus-stack-grafana --type=LoadBalancer --name=grafana-server-ext -n monitoring
 #     - command: kubectl expose deployment rancher --type=LoadBalancer --name=rancher-ext -n cattle-system
 
 #     - debug:
 #         msg: "ArogCD: https://172.18.8.150:8080/ user:admin pass:password \n Grafana: http://172.18.8.151:3000 user:admin pass:prom-operator"
+
