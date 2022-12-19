@@ -1,0 +1,12 @@
+$os = "ubuntu2004"
+$num_instances = 2
+$instance_name_prefix = "k8s"
+$vm_memory = 2048
+$vm_cpus = 2
+$subnet = "192.168.57"
+#$subnetHost = "172.16.100"
+$etcd_instances = 1
+$kube_master_instances = 1
+$kube_node_instances = 1
+#$ansible_tags = ["apps", "ingress-controller"]
+$inventory = "inventory/cluster2"
