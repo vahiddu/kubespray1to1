@@ -1,8 +1,8 @@
 $os = "ubuntu2004"
 $num_instances = 2
 $instance_name_prefix = "k8s"
-$vm_memory = 4096
-$vm_cpus = 4
+$vm_memory = 3000
+$vm_cpus = 2
 $subnet = "172.18.8"
 #$subnetHost = "172.16.100"
 $etcd_instances = 1
